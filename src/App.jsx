@@ -54,17 +54,11 @@ function App() {
       }
     };
 
-    // Update message
-
     worker.current.addEventListener("message", onMessageReceived);
-
-    // Cleanup function
 
     return () =>
       worker.current.removeEventListener("message", onMessageReceived);
   });
-
-  // Get audiobuffer from file
 
   async function readAudioFrom(file) {
     const sampling_rate = 16000;
@@ -74,8 +68,6 @@ function App() {
     const audio = decoded.getChannelData(0);
     return audio;
   }
-
-  // Handle file or recording and call worker
 
   async function handleFormSubmission() {
     if (!file && !audioStream) {

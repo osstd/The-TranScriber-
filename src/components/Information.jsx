@@ -8,7 +8,6 @@ export default function Information(props) {
   const [translation, setTranslation] = useState(null);
   const [toLanguage, setToLanguage] = useState("Select language");
   const [translating, setTranslating] = useState(null);
-  console.log(output);
 
   const worker = useRef();
 
@@ -32,7 +31,7 @@ export default function Information(props) {
           break;
         case "update":
           setTranslation(e.data.output);
-          console.log("UPDATING",e.data.output);
+          console.log("UPDATING", e.data.output);
           break;
         case "complete":
           setTranslating(false);

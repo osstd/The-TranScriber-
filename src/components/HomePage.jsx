@@ -30,7 +30,6 @@ export default function HomePage(props) {
     }
     setRecordingStatus("recording");
 
-    //create new Media recorder instance using the stream
     const media = new MediaRecorder(tempStream, { type: mimeType });
     mediaRecorder.current = media;
 
@@ -61,7 +60,6 @@ export default function HomePage(props) {
     };
   }
 
-  // Show clock on the screen of the elapsed time
   useEffect(() => {
     if (recordingStatus === "inactive") {
       return;

@@ -35,7 +35,7 @@ self.addEventListener("message", async (event) => {
     },
   });
 
-  console.log("HEHEHHERERE", output);
+  console.log("This is final output:", output);
 
   self.postMessage({
     status: "complete",
